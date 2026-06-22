@@ -19,5 +19,5 @@ jobs:
 
       - name: Push to GitLab
         run: |
-          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/daniele.valentini1972/comp_target.git
+          git remote add gitlab https://oauth2:glpat-QEiyWJSKklTFC4VgXY7bIGM6MQpvOjEKdTpiMzBnaQ8.01.170p8dyqp@gitlab.com/daniele.valentini1972/comp_target.git
           git push gitlab main --tags
