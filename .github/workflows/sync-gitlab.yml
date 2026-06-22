@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Debug secrets presence
+      
+      - name: Push to GitLab
         run: |
           if [ -z "${{ secrets.GITLAB_TOKEN }}" ]; then
             echo "TOKEN MANCANTE"
@@ -25,8 +26,6 @@ jobs:
           else
             echo "TOKEN PRESENTE"
           fi
-      - name: Push to GitLab
-        run: |
           git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/daniele.valentini1972/comp_target.git
           git push gitlab main --tags
           
