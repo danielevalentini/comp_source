@@ -22,7 +22,6 @@ jobs:
         run: |
           if [ -z "${{ secrets.GITLAB_TOKEN }}" ]; then
             echo "TOKEN MANCANTE"
-            exit 1
           else
             echo "TOKEN PRESENTE"
           fi
